@@ -28,3 +28,13 @@ android {
 dependencies {
     implementation(project(":ui:feature:home"))
 }
+
+afterEvaluate {
+    tasks
+        .filter { task ->
+            task.name.equals("clean", ignoreCase = true) ||
+                    task.name.contains("assemble", ignoreCase = true)
+        }.forEach { task ->
+            task.dependsOn(":analysis:installGitHooks")
+        }
+}
