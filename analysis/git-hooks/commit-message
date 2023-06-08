@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Regex pattern for conventional commit format
+pattern="^(feat|fix|docs|style|refactor|perf|test|chore|revert)(\([a-zA-Z-]+\))?: .{1,50}"
+
+while read -r commit
+do
+    if ! [[ $commit =~ $pattern ]]; then
+        echo "ERROR: Commit message does not follow conventional commit format."
+        echo "Commit message: $commit"
+        echo "Please use the conventional commit format: type(scope): message (e.g., feat(user): add login functionality)"
+        echo "${red}options are ${options}${normal}"
+        exit 1
+    fi
+done < /dev/stdin
