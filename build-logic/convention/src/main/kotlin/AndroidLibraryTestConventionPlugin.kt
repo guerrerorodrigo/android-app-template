@@ -11,9 +11,6 @@ class AndroidLibraryTestConventionPlugin : Plugin<Project> {
 
     override fun apply(target: Project) {
         with (target) {
-            with(pluginManager) {
-                apply("com.android.test")
-            }
 
             extensions.configure<LibraryExtension> {
                 val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")

@@ -1,4 +1,4 @@
-package com.rodrigoguerrero.myapp.ui.theme
+package com.rodrigoguerrero.home.theme
 
 import androidx.compose.ui.graphics.Color
 

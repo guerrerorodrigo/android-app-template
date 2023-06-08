@@ -1,4 +1,4 @@
-package com.rodrigoguerrero.myapp
+package com.rodrigoguerrero.home
 
 import org.junit.Test
 

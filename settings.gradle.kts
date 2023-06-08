@@ -16,3 +16,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "android-app-template"
 include(":app")
+include(":ui")
+include(":ui:feature")
+include(":ui:feature:home")

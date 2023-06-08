@@ -25,10 +25,6 @@ gradlePlugin {
             id = "my.android.compose.application"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
-        register("androidHilt") {
-            id = "my.android.hilt"
-            implementationClass = "AndroidHiltConventionPlugin"
-        }
         register("androidLibrary") {
             id = "my.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
@@ -37,9 +33,17 @@ gradlePlugin {
             id = "my.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
-        register("androidLibraryTest") {
+        register("androidTestLibrary") {
             id = "my.android.library.test"
             implementationClass = "AndroidLibraryTestConventionPlugin"
+        }
+        register("androidFeature") {
+            id = "my.android.feature"
+            implementationClass = "AndroidFeatureConventionPlugin"
+        }
+        register("androidHilt") {
+            id = "my.android.hilt"
+            implementationClass = "AndroidHiltConventionPlugin"
         }
         register("kotlinLibrary") {
             id = "my.kotlin.library"

@@ -1,4 +1,4 @@
-package com.rodrigoguerrero.myapp
+package com.rodrigoguerrero.home
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,8 +10,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.rodrigoguerrero.myapp.ui.theme.AndroidapptemplateTheme
+import com.rodrigoguerrero.home.theme.AndroidapptemplateTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
