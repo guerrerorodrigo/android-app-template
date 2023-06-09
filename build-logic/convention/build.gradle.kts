@@ -53,5 +53,9 @@ gradlePlugin {
             id = "my.kotlin.library.test"
             implementationClass = "KotlinLibraryTestConventionPlugin"
         }
+        register("androidRoomLibrary") {
+            id = "my.android.room.library"
+            implementationClass = "AndroidRoomLibraryConventionPlugin"
+        }
     }
 }
