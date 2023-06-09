@@ -1,5 +1,6 @@
 import com.android.build.gradle.LibraryExtension
 import com.rodrigoguerrero.buildlogic.convention.AppConfig
+import com.rodrigoguerrero.buildlogic.convention.configureAndroidLint
 import com.rodrigoguerrero.buildlogic.convention.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -19,6 +20,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
 
             extensions.configure<LibraryExtension> {
                 configureKotlinAndroid(this)
+                configureAndroidLint(this)
                 defaultConfig.targetSdk = AppConfig.targetSdk
             }
 

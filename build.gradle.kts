@@ -14,8 +14,6 @@ buildscript {
 
 plugins {
     alias(libs.plugins.io.gitlab.arturbosch.detekt.plugin)
-    alias(libs.plugins.androidLibrary) apply false
-    alias(libs.plugins.kotlinAndroid) apply false
 }
 
 tasks.register("clean", Delete::class) {

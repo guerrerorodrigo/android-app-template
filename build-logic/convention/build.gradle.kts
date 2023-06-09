@@ -49,5 +49,9 @@ gradlePlugin {
             id = "my.kotlin.library"
             implementationClass = "KotlinLibraryConventionPlugin"
         }
+        register("kotlinTestLibrary") {
+            id = "my.kotlin.library.test"
+            implementationClass = "KotlinLibraryTestConventionPlugin"
+        }
     }
 }
