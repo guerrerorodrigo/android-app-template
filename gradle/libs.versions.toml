@@ -32,11 +32,14 @@ com-squareup-okhttp3-okhttp-version = "4.11.0"
 io-gitlab-arturbosch-detekt-version = "1.23.0"
 io-mockk-version = "1.13.5"
 io-coil-kt-coil-compose-version = "2.4.0"
+io-ktor-version = "2.3.1"
 junit-version = "4.13.2"
 org-jetbrains-kotlin-gradle-plugin-version = "1.8.21"
 org-jetbrains-kotlinx-collections-immutable-version = "0.3.5"
 org-jetbrains-kotlinx-coroutines-test-version = "1.7.1"
 org-jetbrains-kotlinx-coroutines-version = "1.7.1"
+org-jetbrains-kotlinx-datetime-version = "0.4.0"
+org-jetbrains-kotlin-plugin-serialization-version = "1.8.21"
 org-junit-jupiter-junit-jupiter-version = "5.9.3"
 org-junit-vintage-junit-vintage-engine-version = "5.9.3"
 
@@ -96,6 +99,12 @@ io-gitlab-arturbosch-detekt-detekt-api = { module = "io.gitlab.arturbosch.detekt
 io-gitlab-arturbosch-detekt-detekt-cli = { module = "io.gitlab.arturbosch.detekt:detekt-cli", version.ref = "io-gitlab-arturbosch-detekt-version" }
 io-gitlab-arturbosch-detekt-detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "io-gitlab-arturbosch-detekt-version" }
 io-gitlab-arturbosch-detekt-detekt-test = { module = "io.gitlab.arturbosch.detekt:detekt-test", version.ref = "io-gitlab-arturbosch-detekt-version" }
+io-ktor-client-auth = { module = "io.ktor:ktor-client-auth", version.ref = "io-ktor-version" }
+io-ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "io-ktor-version" }
+io-ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "io-ktor-version" }
+io-ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "io-ktor-version" }
+io-ktor-client-resources = { module = "io.ktor:ktor-client-resources", version.ref = "io-ktor-version" }
+io-ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "io-ktor-version" }
 io-mockk = { module = "io.mockk:mockk", version.ref = "io-mockk-version" }
 junit = { module = "junit:junit", version.ref = "junit-version" }
 org-jetbrains-kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "org-jetbrains-kotlin-gradle-plugin-version" }
@@ -103,6 +112,7 @@ org-jetbrains-kotlinx-collections-immutable = { module = "org.jetbrains.kotlinx:
 org-jetbrains-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "org-jetbrains-kotlinx-coroutines-version" }
 org-jetbrains-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "org-jetbrains-kotlinx-coroutines-version" }
 org-jetbrains-kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "org-jetbrains-kotlinx-coroutines-test-version" }
+org-jetbrains-kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "org-jetbrains-kotlinx-datetime-version" }
 org-junit-jupiter-junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "org-junit-jupiter-junit-jupiter-version" }
 org-junit-jupiter-junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "org-junit-jupiter-junit-jupiter-version" }
 org-junit-jupiter-junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "org-junit-jupiter-junit-jupiter-version" }
@@ -133,6 +143,14 @@ compose-tooling = [
     "androidx-compose-ui-tooling",
     "androidx-compose-ui-test-manifest",
 ]
+ktor = [
+    "io-ktor-client-auth",
+    "io-ktor-client-android",
+    "io-ktor-client-core",
+    "io-ktor-client-content-negotiation",
+    "io-ktor-serialization-kotlinx-json",
+    "io-ktor-client-resources"
+]
 lint = [
     "com-android-tools-lint-api",
     "com-android-tools-lint-checks",
@@ -159,6 +177,7 @@ test = [
 ]
 
 [plugins]
+com-diffplug-gradle-spotless-plugin = { id = "com.diffplug.gradle.spotless", version.ref = "com-diffplug-spotless-plugin-gradle-version" }
 com-google-protobuf-plugin = { id = "com.google.protobuf", version.ref = "com-google-protobuf-plugin-version" }
 io-gitlab-arturbosch-detekt-plugin = { id = "io.gitlab.arturbosch.detekt", version.ref = "io-gitlab-arturbosch-detekt-version" }
-com-diffplug-gradle-spotless-plugin = { id = "com.diffplug.gradle.spotless", version.ref = "com-diffplug-spotless-plugin-gradle-version" }
+org-jetbrains-kotlin-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "org-jetbrains-kotlin-plugin-serialization-version" }
