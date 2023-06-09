@@ -10,6 +10,7 @@ buildscript {
         classpath(libs.com.google.dagger.hilt.android.gradle.plugin)
         classpath(libs.app.cash.paparazzi.gradle.plugin)
         classpath(libs.com.diffplug.spotless.plugin.gradle)
+        classpath(libs.org.jacoco.core)
     }
 }
 

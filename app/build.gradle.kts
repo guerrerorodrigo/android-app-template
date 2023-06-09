@@ -2,6 +2,7 @@ plugins {
     id("my.android.application")
     id("my.android.compose.application")
     id("my.android.hilt")
+    id("my.android.jacoco.application")
 }
 
 android {

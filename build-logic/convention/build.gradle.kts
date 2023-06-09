@@ -57,5 +57,13 @@ gradlePlugin {
             id = "my.android.room.library"
             implementationClass = "AndroidRoomLibraryConventionPlugin"
         }
+        register("androidJacocoApplication") {
+            id = "my.android.jacoco.application"
+            implementationClass = "AndroidApplicationJacocoConventionPlugin"
+        }
+        register("androidJacocoLibrary") {
+            id = "my.android.jacoco.library"
+            implementationClass = "AndroidLibraryJacocoConventionPlugin"
+        }
     }
 }
