@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# Regex pattern for conventional commit format
-pattern="^(feat|fix|docs|style|refactor|perf|test|chore|revert)(\([a-zA-Z-]+\))?: .{1,50}"
+commit_msg=$(cat "${1:?Missing .git/COMMIT_EDITMSG}")
+options="(build|ci|docs|feat|fix|perf|refactor|style|test|chore|revert)"
+pattern="^${options}(\(.+\))?:[[:space:]]+.*$"
 
-while read -r commit
-do
-    if ! [[ $commit =~ $pattern ]]; then
-        echo "ERROR: Commit message does not follow conventional commit format."
-        echo "Commit message: $commit"
-        echo "Please use the conventional commit format: type(scope): message (e.g., feat(user): add login functionality)"
+exit_status=-1
+if [[ ${commit_msg} =~ $pattern ]]; then
+        exit_status=$?
+    else
+        exit_status=$?
+        echo "${red}Commit message must follow Conventional Commits pattern https://www.conventionalcommits.org/en/v1.0.0/${normal}"
         echo "${red}options are ${options}${normal}"
-        exit 1
-    fi
-done < /dev/stdin
+fi
+
+exit ${exit_status}
