@@ -1,5 +1,16 @@
 #!/bin/bash
 
+if test -t 1; then
+
+    # check if it supports colors.
+    ncolors=$(tput colors)
+
+    if test -n "$ncolors" && test $ncolors -ge 8; then
+        red="$(tput setaf 1; tput bold)"
+        normal="$(tput sgr0)"
+    fi
+fi
+
 commit_msg=$(cat "${1:?Missing .git/COMMIT_EDITMSG}")
 options="(build|ci|docs|feat|fix|perf|refactor|style|test|chore|revert)"
 pattern="^${options}(\(.+\))?:[[:space:]]+.*$"
