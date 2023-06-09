@@ -12,9 +12,11 @@ androidx-lifecycle-version = "2.6.1"
 androidx-navigation-compose-version = "2.6.0"
 androidx-profileinstaller-version = "1.3.1"
 androidx-room-version = "2.5.1"
+androidx-startup-runtime-version = "1.1.1"
 androidx-test-core-ktx-version = "1.5.0"
 androidx-test-espresso-core-version = "3.5.1"
 androidx-test-ext-junit-version = "1.1.5"
+androidx-work-version = "2.8.1"
 app-cash-paparazzi-gradle-plugin-version = "1.3.0"
 app-cash-turbine-version = "0.13.0"
 com-android-library = "7.4.2"
@@ -29,10 +31,11 @@ com-google-protobuf-plugin-version = "0.9.3"
 com-google-protobuf-protoc-version = "21.0-rc-1"
 com-slack-lint-compose-lint-checks-version = "1.2.0"
 com-squareup-okhttp3-okhttp-version = "4.11.0"
-io-gitlab-arturbosch-detekt-version = "1.23.0"
-io-mockk-version = "1.13.5"
 io-coil-kt-coil-compose-version = "2.4.0"
+io-gitlab-arturbosch-detekt-version = "1.23.0"
 io-ktor-version = "2.3.1"
+io-mockk-version = "1.13.5"
+io-strikt-core-version = "0.34.1"
 junit-version = "4.13.2"
 org-jetbrains-kotlin-gradle-plugin-version = "1.8.21"
 org-jetbrains-kotlinx-collections-immutable-version = "0.3.5"
@@ -67,9 +70,12 @@ androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref =
 androidx-room-paging = { module = "androidx.room:room-paging", version.ref = "androidx-room-version"}
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "androidx-room-version"}
 androidx-room-testing = { module = "androidx.room:room-testing", version.ref = "androidx-room-version"}
+androidx-startup-runtime = { module = "androidx.startup:startup-runtime", version.ref = "androidx-startup-runtime-version" }
 androidx-test-core-ktx = { module = "androidx.test:core-ktx", version.ref = "androidx-test-core-ktx-version" }
 androidx-test-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "androidx-test-espresso-core-version" }
 androidx-test-ext-junit-ktx = { module = "androidx.test.ext:junit-ktx", version.ref = "androidx-test-ext-junit-version" }
+androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "androidx-work-version" }
+androidx-work-testing = { module = "androidx.work:work-testing", version.ref = "androidx-work-version" }
 app-cash-paparazzi-gradle-plugin = { module = "app.cash.paparazzi:paparazzi-gradle-plugin", version.ref = "app-cash-paparazzi-gradle-plugin-version" }
 app-cash-turbine = { module = "app.cash.turbine:turbine", version.ref = "app-cash-turbine-version" }
 com-android-tools-build-gradle = { module = "com.android.tools.build:gradle", version.ref = "com-android-tools-build-gradle-version" }
@@ -106,6 +112,7 @@ io-ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref =
 io-ktor-client-resources = { module = "io.ktor:ktor-client-resources", version.ref = "io-ktor-version" }
 io-ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "io-ktor-version" }
 io-mockk = { module = "io.mockk:mockk", version.ref = "io-mockk-version" }
+io-strikt-core = { module = "io.strikt:strikt-core", version.ref = "io-strikt-core-version" }
 junit = { module = "junit:junit", version.ref = "junit-version" }
 org-jetbrains-kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "org-jetbrains-kotlin-gradle-plugin-version" }
 org-jetbrains-kotlinx-collections-immutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "org-jetbrains-kotlinx-collections-immutable-version" }
@@ -174,6 +181,11 @@ test = [
     "junit",
     "org-junit-jupiter-junit-jupiter",
     "org-junit-jupiter-junit-jupiter-api",
+    "io-strikt-core"
+]
+work-manager = [
+    "androidx-work-runtime-ktx",
+    "androidx-work-testing"
 ]
 
 [plugins]
