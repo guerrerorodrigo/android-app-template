@@ -2,7 +2,7 @@
 
 check_branch_name() {
     echo "> Checking branch name...."
-    branch_types="(feature|bugfix|hotfix|refactor|experimental)"
+    branch_types="(master|feature|bugfix|hotfix|refactor|experimental)"
     branch_name_pattern="^${branch_types}\/[A-Z]+-[0-9]+-[A-Za-z]+([-][A-Za-z0-9]+)*$|^(chore\/renovate+-[A-Za-z0-9]+)"
 
     branch_name=$(echo $(git rev-parse --abbrev-ref HEAD))
