@@ -1,4 +1,4 @@
-package com.rodrigoguerrero.home.theme
+package com.rodrigoguerrero.theme
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.shape.RoundedCornerShape

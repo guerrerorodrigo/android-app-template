@@ -1,4 +1,4 @@
-package com.rodrigoguerrero.home.theme.colors
+package com.rodrigoguerrero.theme.colors
 
 import androidx.compose.material3.darkColorScheme
 

@@ -1,4 +1,4 @@
-package com.rodrigoguerrero.home.theme
+package com.rodrigoguerrero.theme
 
 import android.annotation.SuppressLint
 import androidx.compose.material3.Typography
@@ -9,7 +9,6 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.rodrigoguerrero.home.R
 
 private val Roboto = FontFamily(
     Font(

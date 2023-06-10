@@ -8,3 +8,7 @@ plugins {
 android {
     namespace = "com.rodrigoguerrero.home"
 }
+
+dependencies {
+    implementation(project(":ui:core:theme"))
+}

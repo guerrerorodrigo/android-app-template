@@ -27,6 +27,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":ui:core:theme"))
     implementation(project(":ui:feature:home"))
 }
 

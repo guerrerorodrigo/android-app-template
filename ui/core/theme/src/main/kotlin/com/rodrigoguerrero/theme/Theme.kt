@@ -1,4 +1,4 @@
-package com.rodrigoguerrero.home.theme
+package com.rodrigoguerrero.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,9 +9,9 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
-import com.rodrigoguerrero.home.theme.colors.DarkColors
-import com.rodrigoguerrero.home.theme.colors.LightColors
-import com.rodrigoguerrero.home.theme.colors.LocalAppColors
+import com.rodrigoguerrero.theme.colors.DarkColors
+import com.rodrigoguerrero.theme.colors.LightColors
+import com.rodrigoguerrero.theme.colors.LocalAppColors
 import androidx.compose.material3.Typography as TypographyMaterial3
 
 object AppTheme {
