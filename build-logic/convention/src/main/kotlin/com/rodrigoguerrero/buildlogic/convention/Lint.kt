@@ -8,7 +8,7 @@ import org.gradle.api.plugins.ExtensionAware
 import org.gradle.kotlin.dsl.getByType
 
 internal fun Project.configureAndroidLint(
-    commonExtension: CommonExtension<*, *, *, *>
+    commonExtension: CommonExtension<*, *, *, *, *>
 ) {
     commonExtension.apply {
         val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
@@ -31,5 +31,5 @@ internal fun Project.configureAndroidLint(
     }
 }
 
-internal fun Project.androidOptions(block: Action<CommonExtension<*, *, *, *>>): Unit =
+internal fun Project.androidOptions(block: Action<CommonExtension<*, *, *, *, *>>): Unit =
     (this as ExtensionAware).extensions.configure("android", block)
