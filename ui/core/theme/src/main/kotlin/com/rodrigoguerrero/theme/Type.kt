@@ -17,7 +17,8 @@ private val Roboto = FontFamily(
     ),
 )
 
-fun typography() = Typography(
+@Suppress("LongMethod")
+internal fun typography() = Typography(
     displayLarge = TextStyle(
         fontFamily = Roboto,
         fontSize = 57.sp,
@@ -120,4 +121,4 @@ fun typography() = Typography(
 )
 
 @SuppressLint("ComposeCompositionLocalUsage")
-val LocalAppTypography = staticCompositionLocalOf { typography() }
+internal val LocalAppTypography = staticCompositionLocalOf { typography() }

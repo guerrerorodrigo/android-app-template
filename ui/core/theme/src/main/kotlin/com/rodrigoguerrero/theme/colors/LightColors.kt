@@ -2,7 +2,7 @@ package com.rodrigoguerrero.theme.colors
 
 import androidx.compose.material3.lightColorScheme
 
-val LightColors = lightColorScheme(
+internal val LightColors = lightColorScheme(
     primary = light_primary,
     onPrimary = light_onPrimary,
     primaryContainer = light_primaryContainer,

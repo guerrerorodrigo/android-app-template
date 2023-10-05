@@ -14,7 +14,7 @@ android {
             isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -34,8 +34,10 @@ dependencies {
 afterEvaluate {
     tasks
         .filter { task ->
-            task.name.equals("clean", ignoreCase = true) ||
-                    task.name.contains("assemble", ignoreCase = true)
+            task.name.equals("clean", ignoreCase = true) || task.name.contains(
+                "assemble",
+                ignoreCase = true,
+            )
         }.forEach { task ->
             task.dependsOn(":analysis:installGitHooks")
         }

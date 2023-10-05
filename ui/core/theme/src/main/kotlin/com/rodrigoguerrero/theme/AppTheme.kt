@@ -14,26 +14,48 @@ import com.rodrigoguerrero.theme.colors.LightColors
 import com.rodrigoguerrero.theme.colors.LocalAppColors
 import androidx.compose.material3.Typography as TypographyMaterial3
 
+/**
+ * Theme object to access different theme properties
+ */
 object AppTheme {
+    /**
+     * Color scheme
+     */
     val color: ColorScheme
         @Composable
         get() = LocalAppColors.current
 
-    val padding: MyMoneyPadding
+    /**
+     * Paddings to be used
+     */
+    val padding: AppPadding
         @Composable
         get() = LocalAppPadding.current
 
+    /**
+     * Typography
+     */
     val typography: TypographyMaterial3
         @Composable
         get() = LocalAppTypography.current
 
+    /**
+     * Shapes
+     */
     val shapes: Shapes
         @Composable
         get() = LocalAppShapes.current
 }
 
+/**
+ * Composable that holds the app theme
+ *
+ * @param modifier
+ * @param darkTheme
+ * @param content
+ */
 @Composable
-fun AndroidAppTheme(
+fun AppTheme(
     modifier: Modifier = Modifier,
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit,
@@ -44,7 +66,7 @@ fun AndroidAppTheme(
         LightColors
     }
 
-    val padding = MyMoneyPadding()
+    val padding = AppPadding()
     val typography = typography()
 
     CompositionLocalProvider(

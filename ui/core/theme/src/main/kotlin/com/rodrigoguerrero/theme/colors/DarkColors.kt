@@ -2,7 +2,7 @@ package com.rodrigoguerrero.theme.colors
 
 import androidx.compose.material3.darkColorScheme
 
-val DarkColors = darkColorScheme(
+internal val DarkColors = darkColorScheme(
     primary = dark_primary,
     onPrimary = dark_onPrimary,
     primaryContainer = dark_primaryContainer,
