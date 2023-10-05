@@ -68,7 +68,7 @@ This plugin configures a tests for a pure `Kotlin` library module. Use it in any
 
 ## Github Actions
 The template includes a [`Build.yaml`](./.github/workflows/Build.yaml) file that executes the following tasks when pushing a commit to master or when creating a pull request:
-- `./gradlew spotlessCheck --init-script spotless.gradle.kts --no-configuration-cache`
+- `./gradlew detekt`
 - `./gradlew lintDebug`
 - `./gradlew assembleDebug`
 - `./gradlew testDebug testDebugUnitTest`
@@ -83,7 +83,7 @@ To run `lint` you can use `./gradlew lintDebug`.
 
 ## Version Catalogue
 
-The [version catalogue](./gradle/libs.version.toml) contains definitions and bundles for the following libraries:
+The [version catalogue](./gradle/libs.versions.toml) contains definitions and bundles for the following libraries:
 
 ### Android Core
 - [CoreKtx](https://developer.android.com/kotlin/ktx)
@@ -127,13 +127,9 @@ The [version catalogue](./gradle/libs.version.toml) contains definitions and bun
 
 ### Code Analysis & Coverage
 - [Lint](https://developer.android.com/studio/write/lint)
-- [Spotless](https://github.com/diffplug/spotless)
 - [Slack Compose Lint](https://github.com/slackhq/compose-lints)
 - [Detekt](https://detekt.dev/)
 - [Jacoco](https://www.eclemma.org/jacoco/)
 
 ## UI
 You can find a custom theme definition based on `Material3` for `compose` in [Theme.kt](./ui/core/theme). This custom definition consists of dark and light theme colors, custom typography, custom shapes and a `Padding` class with predefined values.
-
-
-

@@ -6,8 +6,21 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
+/**
+ * Class that holds different common paddings
+ *
+ * @property none
+ * @property xxs
+ * @property xs
+ * @property s
+ * @property sm
+ * @property m
+ * @property ml
+ * @property l
+ * @property xl
+ */
 @Immutable
-data class MyMoneyPadding(
+data class AppPadding(
     val none: Dp = 0.dp,
     val xxs: Dp = 2.dp,
     val xs: Dp = 4.dp,
@@ -20,4 +33,4 @@ data class MyMoneyPadding(
 )
 
 @SuppressLint("ComposeCompositionLocalUsage")
-val LocalAppPadding = staticCompositionLocalOf { MyMoneyPadding() }
+internal val LocalAppPadding = staticCompositionLocalOf { AppPadding() }

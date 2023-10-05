@@ -1,6 +1,7 @@
 import com.android.build.gradle.LibraryExtension
 import com.rodrigoguerrero.buildlogic.convention.AppConfig
 import com.rodrigoguerrero.buildlogic.convention.configureAndroidLint
+import com.rodrigoguerrero.buildlogic.convention.configureDetekt
 import com.rodrigoguerrero.buildlogic.convention.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -16,11 +17,13 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             with (pluginManager) {
                 apply("com.android.library")
                 apply("org.jetbrains.kotlin.android")
+                apply("io.gitlab.arturbosch.detekt")
             }
 
             extensions.configure<LibraryExtension> {
                 configureKotlinAndroid(this)
                 configureAndroidLint(this)
+                configureDetekt(this)
                 defaultConfig.targetSdk = AppConfig.targetSdk
             }
 

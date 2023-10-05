@@ -8,15 +8,16 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.rodrigoguerrero.home.screens.SampleScreen
-import com.rodrigoguerrero.theme.AndroidAppTheme
+import com.rodrigoguerrero.theme.AppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
+/** @{inheritDoc} */
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AndroidAppTheme {
+            AppTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,

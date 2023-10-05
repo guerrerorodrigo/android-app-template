@@ -22,9 +22,8 @@ app-cash-turbine-version = "1.0.0"
 com-android-library = "7.4.2"
 com-android-tools-build-gradle-version = "8.1.2"
 com-android-tools-lint-version = "31.1.2"
-com-diffplug-spotless-plugin-gradle-version = "6.22.0"
 com-google-accompanist-version = "0.32.0"
-com-google-dagger-version = "2.48"
+com-google-dagger-version = "2.48.1"
 com-google-firebase-bom-version = "32.3.1"
 com-google-protobuf-kotlin-lite-version = "3.24.3"
 com-google-protobuf-plugin-version = "0.9.4"
@@ -85,7 +84,6 @@ com-android-tools-lint-api = { module = "com.android.tools.lint:lint-api", versi
 com-android-tools-lint-checks = { module = "com.android.tools.lint:lint-checks", version.ref = "com-android-tools-lint-version" }
 com-android-tools-lint-tests = { module = "com.android.tools.lint:lint-tests", version.ref = "com-android-tools-lint-version" }
 com-android-tools-testutils = { module = "com.android.tools:testutils", version.ref = "com-android-tools-lint-version" }
-com-diffplug-spotless-plugin-gradle = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "com-diffplug-spotless-plugin-gradle-version" }
 com-google-accompanist-navigation-animation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "com-google-accompanist-version" }
 com-google-accompanist-navigation-material = { module = "com.google.accompanist:accompanist-navigation-material", version.ref = "com-google-accompanist-version" }
 com-google-accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "com-google-accompanist-version" }
@@ -191,7 +189,6 @@ work-manager = [
 ]
 
 [plugins]
-com-diffplug-gradle-spotless-plugin = { id = "com.diffplug.gradle.spotless", version.ref = "com-diffplug-spotless-plugin-gradle-version" }
 com-google-protobuf-plugin = { id = "com.google.protobuf", version.ref = "com-google-protobuf-plugin-version" }
 io-gitlab-arturbosch-detekt-plugin = { id = "io.gitlab.arturbosch.detekt", version.ref = "io-gitlab-arturbosch-detekt-version" }
 org-jetbrains-kotlin-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "org-jetbrains-kotlin-plugin-serialization-version" }

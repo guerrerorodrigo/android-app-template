@@ -33,8 +33,8 @@ jobs:
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
 
-      - name: Check spotless
-        run: ./gradlew spotlessCheck --init-script spotless.gradle.kts --no-configuration-cache
+      - name: Check detekt
+        run: ./gradlew detekt
 
       - name: Check lint
         run: ./gradlew lintDebug
