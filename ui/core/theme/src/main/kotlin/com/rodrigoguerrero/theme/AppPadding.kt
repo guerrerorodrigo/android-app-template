@@ -8,6 +8,16 @@ import androidx.compose.ui.unit.dp
 
 /**
  * Class that holds different common paddings
+ *
+ * @property none
+ * @property xxs
+ * @property xs
+ * @property s
+ * @property sm
+ * @property m
+ * @property ml
+ * @property l
+ * @property xl
  */
 @Immutable
 data class AppPadding(
