@@ -45,22 +45,22 @@ jobs:
       - name: Run local tests
         run: ./gradlew testDebug testDebugUnitTest
 
-      - name: Upload build outputs (APKs)
-        uses: actions/upload-artifact@v3
-        with:
-          name: APKs
-          path: '**/build/outputs/apk/**/*.apk'
+      # - name: Upload build outputs (APKs)
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: APKs
+      #     path: '**/build/outputs/apk/**/*.apk'
 
-      - name: Upload lint reports (HTML)
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: lint-reports
-          path: '**/build/reports/lint-results-*.html'
+      # - name: Upload lint reports (HTML)
+      #   if: always()
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: lint-reports
+      #     path: '**/build/reports/lint-results-*.html'
 
-      - name: Upload test results (XML)
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-results
-          path: '**/build/test-results/test*UnitTest/**.xml'
+      # - name: Upload test results (XML)
+      #   if: always()
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: test-results
+      #     path: '**/build/test-results/test*UnitTest/**.xml'
